@@ -1,0 +1,55 @@
+@charset "UTF-8";
+/*====================================================
+  # mixin
+=====================================================*/
+/*====================================================
+  # color
+=====================================================*/
+/*====================================================
+  # font
+=====================================================*/
+/*====================================================
+  # common - 全体に共通するスタイル
+=====================================================*/
+@media screen and (max-width: 767px) {
+  .is_pc {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .is_sp {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1279px) {
+  .is_dt {
+    display: none;
+  }
+}
+
+body {
+  font-size: 16px;
+  color: #393939;
+  line-height: 1.6875;
+  font-family: 'M PLUS Rounded 1c', "Noto Sans JP", "Helvetica Neue", arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", meiryo, sans-serif;
+}
+
+.inner {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 90px;
+}
+
+@media (max-width: 767px) {
+  .inner {
+    padding: 0 20px;
+  }
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}

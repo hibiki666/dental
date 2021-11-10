@@ -1,0 +1,79 @@
+@charset "utf-8";
+/*====================================================
+  # mixin
+=====================================================*/
+$breakpoints: (
+  //キー : 値
+  "sm": "(max-width: 767px)",
+  "md": "(min-width: 768px)",
+  "dt": "(max-width: 1279px)",
+  "dt_min": "(min-width: 1279px)"
+) !default;
+
+// メディアクエリ
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+/*====================================================
+  # color
+=====================================================*/
+$main_color: #1391E6;
+$sub_color_dark: #1391E6;
+$sub_color_right: #DFF1FD;
+$accent_color_yellow: #fef251;
+$accent_color_pink: #EE5A6D;
+$font_color_black: #393939;
+$font_color_white: #FFFFFF;
+
+/*====================================================
+  # font
+=====================================================*/
+$en_font: "Fira Sans", sans-serif;
+
+/*====================================================
+  # common - 全体に共通するスタイル
+=====================================================*/
+@media screen and (max-width: 767px) {
+  .is_pc {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .is_sp {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1279px) {
+  .is_dt {
+    display: none;
+  }
+}
+
+body {
+  font-size: 16px;
+  color: $font_color_black;
+  line-height: 1.6875;
+  font-family: 'M PLUS Rounded 1c', "Noto Sans JP", "Helvetica Neue", arial,
+    "Hiragino Kaku Gothic ProN", "Hiragino Sans", meiryo, sans-serif;
+}
+
+.inner {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 90px;
+
+  @include mq("sm") {
+    padding: 0 20px;
+  }
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
