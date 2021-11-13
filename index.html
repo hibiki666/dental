@@ -11,6 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap"
       rel="stylesheet"
     />
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
     <!-- rest.css -->
     <link rel="stylesheet" href="css/reset.css" />
     <!-- style.css -->
@@ -18,6 +23,179 @@
     <title>デンタルクリニック</title>
   </head>
   <body>
+    <!-- header -->
+    <header class="header">
+      <h1 class="header_logo"><img src="images/logo.png" alt="" /></h1>
+      <h1 class="drawer_contents__title">
+        <img src="images/logo-drawer.svg" alt="" />
+      </h1>
+      <div class="header_menu__wrap">
+        <nav class="header_nav is_dt">
+          <ul class="header_list">
+            <li class="header_item is_active">
+              <a href="">
+                <img src="images/icon-01.svg" alt="" />
+                <span class="header_item__desc is_active">ホーム</span>
+              </a>
+            </li>
+            <li class="header_item">
+              <a href="">
+                <img src="images/icon-02.svg" alt="" />
+                <span class="header_item__desc">当院について</span>
+              </a>
+            </li>
+            <li class="header_item">
+              <a href="">
+                <img src="images/icon-03.svg" alt="" />
+                <span class="header_item__desc">診療案内</span>
+              </a>
+            </li>
+            <li class="header_item">
+              <a href="">
+                <img src="images/icon-04.svg" alt="" />
+                <span class="header_item__desc">スタッフ紹介</span>
+              </a>
+            </li>
+            <li class="header_item">
+              <a href="">
+                <img src="images/icon-05.svg" alt="" />
+                <span class="header_item__desc">スタッフブログ</span>
+              </a>
+            </li>
+            <li class="header_item">
+              <a href="">
+                <img src="images/icon-07.svg" alt="" />
+                <span class="header_item__desc">お問い合わせ</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header_access__link is_dt">
+          <p class="header_access__number">03-1234-5678</p>
+        </div>
+      </div>
+      <!-- drawer -->
+      <div class="drawer">
+        <div class="drawer_icon">
+          <div class="drawer_icon_bars">
+            <div class="drawer_bar_icon1"></div>
+            <div class="drawer_bar_icon2"></div>
+            <div class="drawer_bar_icon3"></div>
+          </div>
+        </div>
+      </div>
+      <div class="drawer_contents">
+        <div class="drawer_content_item">
+          <a class="drawer_content_item__link" href="">
+            <img src="images/icon-01.svg" alt="" />
+            <span class="drawer_item__desc">ホーム</span>
+          </a>
+        </div>
+        <div class="drawer_content_item">
+          <a class="drawer_content_item__link" href="">
+            <img src="images/icon-02.svg" alt="" />
+            <span class="drawer_item__desc">当院について</span>
+          </a>
+        </div>
+        <div class="drawer_content_item">
+          <a class="drawer_content_item__link" href="">
+            <img src="images/icon-03.svg" alt="" />
+            <span class="drawer_item__desc">診療案内</span>
+          </a>
+        </div>
+        <div class="drawer_content_item">
+          <a class="drawer_content_item__link" href="">
+            <img src="images/icon-04.svg" alt="" />
+            <span class="drawer_item__desc">スタッフ紹介</span>
+          </a>
+        </div>
+        <div class="drawer_content_item">
+          <a class="drawer_content_item__link" href="">
+            <img src="images/icon-05.svg" alt="" />
+            <span class="drawer_item__desc">スタッフブログ</span>
+          </a>
+        </div>
+        <div class="drawer_content_item">
+          <a class="drawer_content_item__link" href="">
+            <img src="images/icon-07.svg" alt="" />
+            <span class="drawer_item__desc">お問い合わせ</span>
+          </a>
+        </div>
+      </div>
+      <!-- drawer -->
+    </header>
+    <!-- header -->
+    <div class="drawer_background"></div>
+
+    <!-- main_vusial -->
+    <div class="main_vusial">
+      <h2 class="main_vusial__title">
+        <img src="images/top-text.png" alt="" />
+      </h2>
+      <div class="p_swiper">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="main_vusial__image">
+                <img src="images/top-01.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="main_vusial__image">
+                <img src="images/top-02.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="main_vusial__image">
+                <img src="images/top-03.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+    <div class="main_vusial_footer">
+      <div class="main_vusial__article">
+        <div class="mv_wrap">
+          <div class="mv_article__title_wrap">
+            <h3 class="mv_article__title">
+              お知らせ<span class="mv_subtitle">NEWS</span>
+            </h3>
+            <div class="mv_title__link">
+              <a href="#">過去のお知らせはこちら</a>
+            </div>
+          </div>
+          <div class="mv_article__wrap">
+            <div class="mv_article__link">
+              <div class="mv_date">2021.01.01</div>
+              <div class="mv_article">
+                <a href="#">年末年始の営業時間のお知らせ</a>
+              </div>
+            </div>
+            <div class="mv_ariticle__arrow"></div>
+          </div>
+        </div>
+      </div>
+      <img class="mv_time__image" src="images/medical-time-pc-1.png" alt="" />
+    </div>
+    <!-- main_vusial -->
+
+    <!-- footer_link -->
+    <div class="drawer_footer">
+      <div class="drawer_tel__link">03-1234-5678</div>
+      <div class="drawer_reserve__link">
+        <a href="#">WEB予約<br />はこちら</a>
+      </div>
+    </div>
+    <!-- footer_link -->
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

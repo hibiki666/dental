@@ -23,7 +23,7 @@
   }
 }
 
-@media screen and (min-width: 1279px) {
+@media screen and (max-width: 1279px) {
   .is_dt {
     display: none;
   }
@@ -33,7 +33,7 @@ body {
   font-size: 16px;
   color: #393939;
   line-height: 1.6875;
-  font-family: 'M PLUS Rounded 1c', "Noto Sans JP", "Helvetica Neue", arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", meiryo, sans-serif;
+  font-family: "M PLUS Rounded 1c", "Noto Sans JP", "Helvetica Neue", arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", meiryo, sans-serif;
 }
 
 .inner {
@@ -52,4 +52,442 @@ img {
   width: 100%;
   max-width: 100%;
   height: auto;
+}
+
+/*====================================================
+  # header
+=====================================================*/
+.header {
+  display: flex;
+  align-items: center;
+  padding: 25px 40px;
+  box-shadow: 0px 3px 6px #00000029;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  background: #ffffff;
+  transition: 0.3s ease;
+}
+
+.header.is_active {
+  background: #0060A0;
+  box-shadow: none;
+  transition: 0.3s ease;
+}
+
+.header_logo {
+  width: 270px;
+}
+
+.header_logo.is_active {
+  display: none;
+}
+
+.header_menu__wrap {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header_nav {
+  margin-right: 60px;
+}
+
+.header_list {
+  display: flex;
+}
+
+.header_item {
+  position: relative;
+  text-align: center;
+}
+
+.header_item:not(:last-child) {
+  margin-right: 24px;
+}
+
+.header_item:hover:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: #1391e6;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header_item a {
+  font-size: 0.859vw;
+  color: #393939;
+}
+
+.header_item a:hover {
+  color: #1391e6;
+}
+
+.header_item a > img {
+  width: 24px;
+  height: 24px;
+}
+
+.header_item.is_active {
+  position: relative;
+}
+
+.header_item.is_active::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: #1391e6;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s ease;
+}
+
+.header_item__desc {
+  display: block;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.header_item__desc.is_active {
+  color: #0060A0;
+}
+
+.header_access__text {
+  font-size: 0.938vw;
+}
+
+.header_access__number {
+  font-size: 2.5vw;
+  color: #1391e6;
+  font-weight: bold;
+  position: relative;
+}
+
+.header_access__number::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: url(../images/icon_tel.png) center center/contain;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -31px;
+}
+
+.header_access__number::after {
+  content: "〒166-0001 東京都杉並区阿佐谷北7-3-1";
+  position: absolute;
+  color: #393939;
+  font-size: 0.9vw;
+  top: -10px;
+  right: 0;
+}
+
+.drawer {
+  z-index: 300;
+  display: none;
+}
+
+@media (max-width: 1279px) {
+  .drawer {
+    display: block;
+  }
+}
+
+.drawer_icon_bars {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.drawer_icon_bars.is_active .drawer_bar_icon1 {
+  transform: rotate(45deg);
+  top: 8px;
+  background: #ffffff;
+}
+
+.drawer_icon_bars.is_active .drawer_bar_icon2 {
+  display: none;
+}
+
+.drawer_icon_bars.is_active .drawer_bar_icon3 {
+  transform: rotate(-45deg);
+  top: 8px;
+  background: #ffffff;
+}
+
+.drawer_bar_icon1,
+.drawer_bar_icon2,
+.drawer_bar_icon3 {
+  position: absolute;
+  width: 100%;
+  background: #1391e6;
+  height: 3px;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease 0s;
+}
+
+.drawer_bar_icon1 {
+  top: 0;
+}
+
+.drawer_bar_icon2 {
+  top: 10px;
+}
+
+.drawer_bar_icon3 {
+  top: 20px;
+}
+
+.drawer_contents {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 60px 40px;
+  z-index: 200;
+  transform: translateY(105%);
+  transition: transform 0.5s ease 0s;
+  margin-top: 57px;
+  left: 0;
+}
+
+.drawer_contents.is_active {
+  transform: translateY(0);
+}
+
+.drawer_contents__title {
+  display: none;
+}
+
+.drawer_contents__title.is_active {
+  display: block;
+}
+
+.drawer_content_item__link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.drawer_content_item {
+  width: 255px;
+  margin: 0 auto;
+  position: relative;
+  text-align: left;
+  border-bottom: 2px dotted #fff;
+  padding: 14px;
+}
+
+.drawer_content_item::after {
+  content: "";
+  position: absolute;
+  background: url(../images/icon-right.svg) center center/contain;
+  width: 16px;
+  height: 15px;
+  top: 35%;
+  right: 0;
+}
+
+.drawer_content_item:not(:last-child) {
+  margin-bottom: 18px;
+}
+
+.drawer_content_item a {
+  color: #ffffff;
+}
+
+.drawer_content_item a > img {
+  width: 24px;
+  height: 24px;
+  margin-right: auto;
+}
+
+.drawer_content_item:nth-child(1) {
+  border-top: 2px dotted #fff;
+}
+
+.drawer_item__desc {
+  font-size: 1.094vw;
+}
+
+.drawer_item__arrow {
+  background: url(../images/icon-right.svg);
+  width: 16px;
+  height: 15px;
+}
+
+.drawer_footer {
+  bottom: 0;
+}
+
+.drawer_reserve__link a {
+  color: #ffffff;
+}
+
+.drawer_background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0060A0;
+  display: none;
+  z-index: 99;
+  transition: 0.3s ease;
+}
+
+.drawer_background.is_active {
+  display: block;
+}
+
+/*====================================================
+  # main_vusial
+=====================================================*/
+.main_vusial {
+  margin: 0 62px;
+  margin-top: 144px;
+  position: relative;
+}
+
+.main_vusial__title {
+  position: absolute;
+  z-index: 2;
+  width: 415px;
+  max-width: 415px;
+  bottom: 15%;
+  left: 10%;
+}
+
+.p_swiper {
+  position: relative;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  display: none;
+}
+
+.swiper-button-next {
+  background: url(../images/arrow-right.png) center center/contain;
+  width: 70px;
+  height: 70px;
+  color: transparent;
+  right: -34px;
+  z-index: 10;
+}
+
+.swiper-button-prev {
+  background: url(../images/arrow-left.png) center center/contain;
+  width: 70px;
+  height: 70px;
+  left: -34px;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  width: auto;
+  transform: rotate(90deg);
+  left: -40px;
+}
+
+.main_vusial_footer {
+  margin: 0 100px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .main_vusial_footer {
+    display: block;
+  }
+}
+
+.main_vusial__article {
+  display: flex;
+  justify-content: center;
+}
+
+.mv_wrap {
+  width: 41vw;
+  max-width: 100%;
+}
+
+.mv_article__title_wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+.mv_article__title {
+  font-size: 1.563vw;
+  font-weight: bold;
+}
+
+.mv_subtitle {
+  color: #1391e6;
+  font-size: 0.938vw;
+  margin-left: 8px;
+}
+
+.mv_title__link {
+  margin-left: auto;
+}
+
+.mv_title__link a {
+  color: #888888;
+  font-size: 0.938vw;
+}
+
+.mv_article__wrap {
+  display: flex;
+  align-items: center;
+  border-top: 2px solid #393939;
+  border-bottom: 2px solid #393939;
+  padding: 10px;
+}
+
+.mv_article__link {
+  display: flex;
+  align-items: center;
+}
+
+.mv_date {
+  font-size: 0.938vw;
+}
+
+.mv_article {
+  margin-left: 24px;
+}
+
+.mv_article a {
+  color: #393939;
+  font-size: 1.094vw;
+}
+
+.mv_ariticle__arrow {
+  background: url(../images/icon-arrow-black.png) center center/contain;
+  margin-left: auto;
+  width: 14px;
+  height: 14px;
+}
+
+.mv_time__image {
+  border-radius: 30px;
+  box-shadow: 0 5px 6px 2px gray;
+  margin-left: 63px;
+  display: block;
+  width: 37.2vw;
+  margin-top: -35px;
+  z-index: 1;
 }
