@@ -20,6 +20,7 @@ const swiper = new Swiper('.swiper', {
   }
 });
 
+
 // ハンバーガーメニュー
 jQuery('.drawer_icon').on('click', function(e) {
   e.preventDefault();
@@ -30,6 +31,7 @@ jQuery('.drawer_icon').on('click', function(e) {
   jQuery('.drawer_contents__title').toggleClass('is_active');
   jQuery('.header_logo').toggleClass('is_active');
   jQuery('.header').toggleClass('is_active');
+  jQuery('.footer_fixd').toggleClass('is_active');
 
   return false
 });
