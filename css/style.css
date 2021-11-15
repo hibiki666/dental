@@ -107,7 +107,7 @@ img {
   background: url(../images/title-deco.png) center center/contain;
   width: 60px;
   height: 18px;
-  top: 25%;
+  top: 35%;
   left: 50%;
   transform: translateX(calc(-50% - 185px));
 }
@@ -115,6 +115,7 @@ img {
 @media (max-width: 767px) {
   .cmn_title::before {
     transform: translateX(calc(-50% - 145px));
+    top: 25%;
   }
 }
 
@@ -124,7 +125,7 @@ img {
   background: url(../images/title-deco.png) center center/contain;
   width: 60px;
   height: 18px;
-  top: 25%;
+  top: 35%;
   right: 50%;
   transform: translateX(calc(-50% + 245px));
 }
@@ -132,6 +133,7 @@ img {
 @media (max-width: 767px) {
   .cmn_title::after {
     transform: translateX(calc(-50% + 205px));
+    top: 25%;
   }
 }
 
@@ -152,7 +154,7 @@ img {
 }
 
 .header.is_active {
-  background: #0060A0;
+  background: #0060a0;
   box-shadow: none;
   transition: 0.3s ease;
 }
@@ -242,7 +244,7 @@ img {
 }
 
 .header_item__desc.is_active {
-  color: #0060A0;
+  color: #0060a0;
 }
 
 .header_access__text {
@@ -426,7 +428,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #0060A0;
+  background: #0060a0;
   display: none;
   z-index: 99;
   transition: 0.3s ease;
@@ -799,7 +801,7 @@ img {
 }
 
 .recommend_item {
-  width: calc(100%/3);
+  width: calc(100% / 3);
 }
 
 @media (max-width: 767px) {
@@ -836,6 +838,190 @@ img {
 
 .recommend_text__red {
   color: #ee5a6d;
+}
+
+/*====================================================
+  # guidance
+=====================================================*/
+.guidance {
+  margin-top: 165px;
+}
+
+@media (max-width: 767px) {
+  .guidance {
+    margin-top: 100px;
+  }
+}
+
+.guidance_bg__top {
+  background: url(../images/bg-top.png);
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 15.703vw;
+  width: 100%;
+}
+
+.guidance_inner {
+  background: #dff1fd;
+}
+
+.guidance_title::before {
+  left: 50%;
+  transform: translateX(calc(-50% - 110px));
+}
+
+@media (max-width: 767px) {
+  .guidance_title::before {
+    transform: translateX(calc(-50% - 85px));
+    top: 25%;
+  }
+}
+
+.guidance_title::after {
+  right: 50%;
+  transform: translateX(calc(-50% + 165px));
+}
+
+@media (max-width: 767px) {
+  .guidance_title::after {
+    transform: translateX(calc(-50% + 140px));
+    top: 25%;
+  }
+}
+
+.guidance_wrap {
+  display: flex;
+  margin-top: 60px;
+}
+
+@media (max-width: 767px) {
+  .guidance_wrap {
+    display: block;
+  }
+}
+
+.guidance_item {
+  width: calc(100% / 2);
+  height: 290px;
+  border-radius: 20px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .guidance_item {
+    width: 100%;
+  }
+}
+
+.guidance_item1 {
+  background: url(../images/medical_1.png);
+  background-size: cover;
+  margin-right: 80px;
+}
+
+@media (max-width: 767px) {
+  .guidance_item1 {
+    margin-bottom: 20px;
+  }
+}
+
+.guidance_item2 {
+  background: url(../images/medical_2.png);
+  background-size: cover;
+}
+
+.guidance_item__wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.guidance_sub__title {
+  font-size: 1.75rem;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+}
+
+.guidance_sub__title::before {
+  content: "";
+  position: absolute;
+  background: #ffffff;
+  height: 2px;
+  width: 50px;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.guidance_text {
+  margin-top: 42px;
+  color: #ffffff;
+}
+
+.guidance_desc__wrap {
+  background: #fff;
+  padding: 40px;
+  margin-top: 61px;
+}
+
+.guidance_desc {
+  font-size: 0.875rem;
+}
+
+.guidance_desc_red {
+  color: #ee5a6d;
+}
+
+.gudaince_bg__bottom {
+  height: 15.703vw;
+  width: 100%;
+  background: url(../images/bg-bottom.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  position: relative;
+}
+
+.gudaince_bg__bottom::before {
+  content: "";
+  position: absolute;
+  background: url(../images/deco-kirakira2-w.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 4.453vw;
+  height: 4.453vw;
+  bottom: 80px;
+  left: 10px;
+}
+
+@media (max-width: 767px) {
+  .gudaince_bg__bottom::before {
+    bottom: 30px;
+  }
+}
+
+.gudaince_bg__bottom::after {
+  content: "";
+  position: absolute;
+  background: url(../images/deco-kirakira-w.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 9.766vw;
+  height: 10.703vw;
+  bottom: 60px;
+  right: 5px;
+}
+
+@media (max-width: 767px) {
+  .gudaince_bg__bottom::after {
+    bottom: 10px;
+  }
 }
 
 /*====================================================
