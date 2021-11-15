@@ -63,15 +63,15 @@ body {
     "Hiragino Kaku Gothic ProN", "Hiragino Sans", meiryo, sans-serif;
 }
 
-// .inner {
-//   max-width: 100%;
-//   margin: 0 auto;
-//   padding: 0 90px;
+.inner {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 80px;
 
-//   @include mq("sm") {
-//     padding: 0 20px;
-//   }
-// }
+  @include mq("sm") {
+    padding: 0 20px;
+  }
+}
 
 img {
   width: 100%;
@@ -81,8 +81,69 @@ img {
 
 .cmn_link {
   width: 176px;
-  a {
+  border-radius: 20px;
+  border: 1px solid $main_color;
+  background: #fff;
+  text-align: center;
+  height: 43px;
+  line-height: 43px;
+  position: relative;
 
+  @include mq("sm") {
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+  a {
+    display: inline-block;
+    color: $main_color;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background: url(../images/icon-arrow-blue-btn.png) center center / contain;
+    width: 12px;
+    height: 12px;
+    top: 35%;
+    right: 6px;
+  }
+}
+
+.cmn_title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  letter-spacing: 1.6px;
+
+  @include mq("sm") {
+    font-size: 1.25rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: url(../images/title-deco.png) center center / contain;
+    width: 60px;
+    height: 18px;
+    top: 25%;
+    left: 50%;
+    transform: translateX(calc(-50% - 185px));
+    @include mq("sm") {
+      transform: translateX(calc(-50% - 145px));
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background: url(../images/title-deco.png) center center / contain;
+    width: 60px;
+    height: 18px;
+    top: 25%;
+    right: 50%;
+    transform: translateX(calc(-50% + 245px));
+    @include mq("sm") {
+      transform: translateX(calc(-50% + 205px));
+    }
   }
 }
 
@@ -664,6 +725,66 @@ top: 20px;
     top: 35%;
     right: 6px;
   }
+}
+
+/*====================================================
+  # recommend
+=====================================================*/
+.recommend {
+  margin-top: 250px;
+  @include mq("sm") {
+    margin-top: 120px;
+  }
+}
+
+.recommend_inner {
+
+}
+
+.recmmend_title {
+
+}
+
+.recommend_list {
+  display: flex;
+  margin-top: 60px;
+  @include mq("sm") {
+    display: block;
+  }
+}
+
+.recommend_item {
+  width: calc(100%/3);
+  @include mq("sm") {
+    width: 100%;
+  }
+
+  &:not(:first-child) {
+    margin-left: 66px;
+    @include mq("sm") {
+      margin-left: 0;
+      margin-top: 67px;
+    }
+  }
+}
+
+.recommend_title__image {
+  width: 177px;
+  margin: 0 auto;
+  margin-bottom: 16px;
+}
+
+.recommen_item_image {
+  margin-bottom: 24px;
+}
+
+.recommend_text {
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.recommend_text__red {
+  color: $accent_color_pink;
 }
 
 /*====================================================

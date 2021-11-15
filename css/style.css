@@ -36,6 +36,18 @@ body {
   font-family: "M PLUS Rounded 1c", "Noto Sans JP", "Helvetica Neue", arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", meiryo, sans-serif;
 }
 
+.inner {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+@media (max-width: 767px) {
+  .inner {
+    padding: 0 20px;
+  }
+}
+
 img {
   width: 100%;
   max-width: 100%;
@@ -44,6 +56,83 @@ img {
 
 .cmn_link {
   width: 176px;
+  border-radius: 20px;
+  border: 1px solid #1391e6;
+  background: #fff;
+  text-align: center;
+  height: 43px;
+  line-height: 43px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .cmn_link {
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+}
+
+.cmn_link a {
+  display: inline-block;
+  color: #1391e6;
+}
+
+.cmn_link::after {
+  content: "";
+  position: absolute;
+  background: url(../images/icon-arrow-blue-btn.png) center center/contain;
+  width: 12px;
+  height: 12px;
+  top: 35%;
+  right: 6px;
+}
+
+.cmn_title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  letter-spacing: 1.6px;
+}
+
+@media (max-width: 767px) {
+  .cmn_title {
+    font-size: 1.25rem;
+  }
+}
+
+.cmn_title::before {
+  content: "";
+  position: absolute;
+  background: url(../images/title-deco.png) center center/contain;
+  width: 60px;
+  height: 18px;
+  top: 25%;
+  left: 50%;
+  transform: translateX(calc(-50% - 185px));
+}
+
+@media (max-width: 767px) {
+  .cmn_title::before {
+    transform: translateX(calc(-50% - 145px));
+  }
+}
+
+.cmn_title::after {
+  content: "";
+  position: absolute;
+  background: url(../images/title-deco.png) center center/contain;
+  width: 60px;
+  height: 18px;
+  top: 25%;
+  right: 50%;
+  transform: translateX(calc(-50% + 245px));
+}
+
+@media (max-width: 767px) {
+  .cmn_title::after {
+    transform: translateX(calc(-50% + 205px));
+  }
 }
 
 /*====================================================
@@ -683,6 +772,70 @@ img {
   height: 12px;
   top: 35%;
   right: 6px;
+}
+
+/*====================================================
+  # recommend
+=====================================================*/
+.recommend {
+  margin-top: 250px;
+}
+
+@media (max-width: 767px) {
+  .recommend {
+    margin-top: 120px;
+  }
+}
+
+.recommend_list {
+  display: flex;
+  margin-top: 60px;
+}
+
+@media (max-width: 767px) {
+  .recommend_list {
+    display: block;
+  }
+}
+
+.recommend_item {
+  width: calc(100%/3);
+}
+
+@media (max-width: 767px) {
+  .recommend_item {
+    width: 100%;
+  }
+}
+
+.recommend_item:not(:first-child) {
+  margin-left: 66px;
+}
+
+@media (max-width: 767px) {
+  .recommend_item:not(:first-child) {
+    margin-left: 0;
+    margin-top: 67px;
+  }
+}
+
+.recommend_title__image {
+  width: 177px;
+  margin: 0 auto;
+  margin-bottom: 16px;
+}
+
+.recommen_item_image {
+  margin-bottom: 24px;
+}
+
+.recommend_text {
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.recommend_text__red {
+  color: #ee5a6d;
 }
 
 /*====================================================
