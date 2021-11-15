@@ -22,7 +22,7 @@ $breakpoints: (
   # color
 =====================================================*/
 $main_color: #1391e6;
-$sub_color_dark: #0060A0;
+$sub_color_dark: #0060a0;
 $sub_color_right: #dff1fd;
 $accent_color_yellow: #fef251;
 $accent_color_pink: #ee5a6d;
@@ -125,11 +125,12 @@ img {
     background: url(../images/title-deco.png) center center / contain;
     width: 60px;
     height: 18px;
-    top: 25%;
+    top: 35%;
     left: 50%;
     transform: translateX(calc(-50% - 185px));
     @include mq("sm") {
       transform: translateX(calc(-50% - 145px));
+      top: 25%;
     }
   }
   &::after {
@@ -138,11 +139,12 @@ img {
     background: url(../images/title-deco.png) center center / contain;
     width: 60px;
     height: 18px;
-    top: 25%;
+    top: 35%;
     right: 50%;
     transform: translateX(calc(-50% + 245px));
     @include mq("sm") {
       transform: translateX(calc(-50% + 205px));
+      top: 25%;
     }
   }
 }
@@ -330,7 +332,7 @@ img {
 }
 
 .drawer_bar_icon3 {
-top: 20px;
+  top: 20px;
 }
 
 .drawer_contents {
@@ -639,7 +641,7 @@ top: 20px;
   display: flex;
   margin-top: 240px;
 
-  @include mq("sm")  {
+  @include mq("sm") {
     flex-direction: column-reverse;
     margin-top: 200px;
   }
@@ -738,11 +740,9 @@ top: 20px;
 }
 
 .recommend_inner {
-
 }
 
 .recmmend_title {
-
 }
 
 .recommend_list {
@@ -754,7 +754,7 @@ top: 20px;
 }
 
 .recommend_item {
-  width: calc(100%/3);
+  width: calc(100% / 3);
   @include mq("sm") {
     width: 100%;
   }
@@ -788,6 +788,168 @@ top: 20px;
 }
 
 /*====================================================
+  # guidance
+=====================================================*/
+.guidance {
+  margin-top: 165px;
+  @include mq("sm") {
+    margin-top: 100px;
+  }
+}
+
+.guidance_bg__top {
+  background: url(../images/bg-top.png);
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 15.703vw;
+  width: 100%;
+}
+
+.guidance_inner {
+  background: $sub_color_right;
+}
+
+.guidance_title {
+  &::before {
+    left: 50%;
+    transform: translateX(calc(-50% - 110px));
+    @include mq("sm") {
+      transform: translateX(calc(-50% - 85px));
+      top: 25%;
+    }
+  }
+  &::after {
+    right: 50%;
+    transform: translateX(calc(-50% + 165px));
+    @include mq("sm") {
+      transform: translateX(calc(-50% + 140px));
+      top: 25%;
+    }
+  }
+}
+
+.guidance_wrap {
+  display: flex;
+  margin-top: 60px;
+  @include mq("sm") {
+    display: block;
+  }
+}
+
+.guidance_item {
+  width: calc(100% / 2);
+  height: 290px;
+  border-radius: 20px;
+  position: relative;
+  @include mq("sm") {
+    width: 100%;
+  }
+}
+
+.guidance_item1 {
+  background: url(../images/medical_1.png);
+  background-size: cover;
+  margin-right: 80px;
+  @include mq("sm") {
+    margin-bottom: 20px;
+  }
+}
+
+.guidance_item2 {
+  background: url(../images/medical_2.png);
+  background-size: cover;
+}
+
+.guidance_item__wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.guidance_sub__title {
+  font-size: 1.75rem;
+  color: $font_color_white;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: $font_color_white;
+    height: 2px;
+    width: 50px;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.guidance_text {
+  margin-top: 42px;
+  color: $font_color_white;
+}
+
+.guidance_desc__wrap {
+  background: #fff;
+  padding: 40px;
+  margin-top: 61px;
+}
+
+.guidance_desc {
+  font-size: 0.875rem;
+}
+
+.guidance_desc_red {
+  color: $accent_color_pink;
+}
+
+.gudaince_bg__bottom {
+  height: 15.703vw;
+  width: 100%;
+  background: url(../images/bg-bottom.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background: url(../images/deco-kirakira2-w.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 4.453vw;
+    height: 4.453vw;
+    bottom: 80px;
+    left: 10px;
+    @include mq("sm") {
+      bottom: 30px;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background: url(../images/deco-kirakira-w.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 9.766vw;
+    height: 10.703vw;
+    bottom: 60px;
+    right: 5px;
+    @include mq("sm") {
+      bottom: 10px;
+    }
+  }
+}
+
+.guidance_starimage {
+}
+
+/*====================================================
   # contact_baner_footer
 =====================================================*/
 .footer_fixd {
@@ -799,10 +961,10 @@ top: 20px;
   background: #fff;
   z-index: 300;
   bottom: 0;
-  display: none;// 最後外して全部見えるように修正
+  display: none; // 最後外して全部見えるように修正
 
   &.is_active {
-    background-color:rgba(255,255,255,0.8);
+    background-color: rgba(255, 255, 255, 0.8);
   }
 }
 
