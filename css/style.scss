@@ -377,6 +377,11 @@ img {
   align-items: center;
 }
 
+.drawer_image {
+  fill: #fff;
+  margin-right: 14px;
+}
+
 .drawer_content_item {
   width: 255px;
   margin: 0 auto;
@@ -1406,12 +1411,22 @@ img {
   bottom: 24px;
   width: 52px;
   height: 52px;
-  transition: all 0.3s 0s;
+  transition: 0.3s ease;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 1;
+  &.is_show {
+    opacity: 1;
+    visibility: visible;
+  }
+  &:hover {
+    opacity: 0.7;
+  }
   @include mq("sm") {
     bottom: 90px;
   }
   a {
-
+    transition: 0.3s ease;
   }
 }
 
@@ -1432,6 +1447,9 @@ img {
     color: $font_color_white;
     width: inherit;
     height: inherit;
+  }
+  @include mq("tab") {
+    display: none;
   }
 }
 
