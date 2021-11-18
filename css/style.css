@@ -380,6 +380,11 @@ img {
   align-items: center;
 }
 
+.drawer_image {
+  fill: #fff;
+  margin-right: 14px;
+}
+
 .drawer_content_item {
   width: 255px;
   margin: 0 auto;
@@ -1556,13 +1561,29 @@ img {
   bottom: 24px;
   width: 52px;
   height: 52px;
-  transition: all 0.3s 0s;
+  transition: 0.3s ease;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 1;
+}
+
+.to_top.is_show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.to_top:hover {
+  opacity: 0.7;
 }
 
 @media (max-width: 767px) {
   .to_top {
     bottom: 90px;
   }
+}
+
+.to_top a {
+  transition: 0.3s ease;
 }
 
 /*====================================================
@@ -1584,6 +1605,12 @@ img {
   color: #ffffff;
   width: inherit;
   height: inherit;
+}
+
+@media (max-width: 980px) {
+  .web_reserve_icon {
+    display: none;
+  }
 }
 
 .reserve_text {
@@ -1676,4 +1703,96 @@ img {
 
 .baner_reserve__span {
   font-size: 12px;
+}
+
+/*====================================================
+  # 下層ページ About
+=====================================================*/
+.about_top {
+  padding: 0 60px;
+}
+
+@media (max-width: 767px) {
+  .about_top {
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .about_inenr {
+    margin-top: 148px;
+    background: url(../images/page-about_top.png) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    max-width: 100%;
+    height: 403px;
+    border-radius: 12px;
+    position: relative;
+  }
+}
+
+@media (max-width: 767px) {
+  .about_inenr {
+    margin-top: 82px;
+    background: url(../images/page-about_top-sp.png) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    max-width: 100%;
+    height: 188px;
+    border-radius: 12px;
+    position: relative;
+  }
+}
+
+.about_title_wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-align: center;
+}
+
+.about_top__title {
+  position: relative;
+  font-size: 2rem;
+  line-height: 0.8;
+  letter-spacing: 3.2px;
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .about_top__title {
+    font-size: 1.5rem;
+  }
+}
+
+.about_top_text {
+  font-size: 0.875rem;
+  margin-top: 20px;
+  letter-spacing: 1.4px;
+}
+
+@media (max-width: 767px) {
+  .about_top_text {
+    font-size: 0.75rem;
+    margin-top: 16px;
+  }
+}
+
+.breadcrumb {
+  margin-top: 14px;
+  margin-left: 30px;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 767px) {
+  .breadcrumb {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+.breadcrumb_item {
+  color: #C2C2C2;
 }
