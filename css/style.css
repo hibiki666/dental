@@ -137,6 +137,48 @@ img {
   }
 }
 
+.tag_link {
+  width: auto;
+  height: auto;
+  border: 2px solid #1391e6;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .tag_link {
+    width: 100%;
+    border: 1px solid #1391e6;
+  }
+}
+
+.tag_link a {
+  display: inline-block;
+  color: #1391e6;
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 1.92px;
+  padding: 19px 32px;
+}
+
+@media (max-width: 767px) {
+  .tag_link a {
+    font-size: 1.25rem;
+  }
+}
+
+.tag_link:not(:last-child) {
+  margin-right: 16px;
+}
+
+@media (max-width: 767px) {
+  .tag_link:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+}
+
 /*====================================================
   # header
 =====================================================*/
@@ -1805,12 +1847,41 @@ img {
 =====================================================*/
 .about_policy {
   margin-top: 80px;
+  overflow-x: hidden;
   position: relative;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .about_policy::before {
+    content: "";
+    position: absolute;
+    background: url(../images/concept-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 56vw;
+    top: 110px;
+    right: -32%;
+    z-index: -1;
+  }
 }
 
 @media (max-width: 767px) {
   .about_policy {
     margin-top: 60px;
+  }
+  .about_policy::before {
+    content: "";
+    position: absolute;
+    background: url(../images/concept-bg_sp.png.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 556px;
+    top: 110px;
+    right: -14%;
+    z-index: -1;
   }
 }
 
@@ -1855,7 +1926,7 @@ img {
   display: flex;
   align-items: center;
   height: auto;
-  margin-right: 140px;
+  margin-right: 10.983vw;
 }
 
 @media (max-width: 767px) {
@@ -2168,5 +2239,454 @@ img {
   .about_appearance__item:nth-child(5),
   .about_appearance__item:nth-child(6) {
     margin-bottom: 0;
+  }
+}
+
+/*====================================================
+  # 下層ページ guidane
+=====================================================*/
+/*====================================================
+# guidance_top
+=====================================================*/
+.guidance_top {
+  height: 340px;
+  margin-top: 146px;
+  margin-right: 60px;
+  margin-left: 60px;
+}
+
+@media (max-width: 767px) {
+  .guidance_top {
+    height: 220px;
+    margin-top: 80px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .guidance_top__inner {
+    background: url(../images/page-medical_top.png) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    border-radius: 20px;
+    height: inherit;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .guidance_top__inner {
+    background: url(../images/page-medical_top-sp.png) no-repeat;
+    background-size: cover;
+    position: relative;
+    border-radius: 20px;
+    height: inherit;
+    width: 100%;
+  }
+}
+
+.guidance_top__wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+}
+
+.guidance_top__title {
+  font-size: 2rem;
+  letter-spacing: 3.2px;
+  line-height: 1.125;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .guidance_top__title {
+    font-size: 1.5rem;
+    letter-spacing: 4.8px;
+  }
+}
+
+.guidance_top__text {
+  text-align: center;
+  margin-top: 20px;
+  letter-spacing: 1.4px;
+  line-height: 2.57;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 767px) {
+  .guidance_top__text {
+    font-size: 0.75rem;
+    letter-spacing: 1.2px;
+    margin-top: 16px;
+  }
+}
+
+/*====================================================
+# guidance_tag__links
+=====================================================*/
+.guidance_tag__links {
+  margin-top: 85px;
+  margin-left: 140px;
+  margin-right: 140px;
+}
+
+@media (max-width: 767px) {
+  .guidance_tag__links {
+    margin-top: 65px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.genelal_tag__title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  letter-spacing: 2.24px;
+  line-height: 1.42;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .genelal_tag__title {
+    font-size: 1.25rem;
+  }
+}
+
+.genelal_tag__title::after {
+  content: "保険対象";
+  position: absolute;
+  font-size: 0.875rem;
+  color: #ffffff;
+  background: #1391e6;
+  border-radius: 50px;
+  padding: 8px 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 150px;
+  letter-spacing: 1.12px;
+}
+
+@media (max-width: 767px) {
+  .genelal_tag__title::after {
+    left: 110px;
+    padding: 6px 10px;
+  }
+}
+
+.general_tag__links {
+  margin-bottom: 80px;
+}
+
+@media (max-width: 767px) {
+  .general_tag__links {
+    margin-bottom: 85px;
+  }
+}
+
+.tag_links_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+@media (max-width: 767px) {
+  .tag_links_wrap {
+    display: block;
+    flex-wrap: nowrap;
+  }
+}
+
+.special_tag__title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  letter-spacing: 2.24px;
+  line-height: 1.42;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .special_tag__title {
+    font-size: 1.25rem;
+  }
+}
+
+.special_tag__title::after {
+  content: "実費";
+  position: absolute;
+  font-size: 0.875rem;
+  color: #ffffff;
+  background: #ee5a6d;
+  border-radius: 50px;
+  padding: 8px 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 150px;
+  letter-spacing: 1.12px;
+}
+
+@media (max-width: 767px) {
+  .special_tag__title::after {
+    left: 110px;
+    padding: 6px 10px;
+  }
+}
+
+/*====================================================
+  # guidance_achievement
+=====================================================*/
+.guidance_achievement {
+  margin-top: 120px;
+  width: 100%;
+}
+
+.guidance_achive_bg {
+  background: url(../images/bg-top.png);
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 15.703vw;
+  width: 100%;
+}
+
+.guidance_achieve__inner {
+  background: #dff1fd;
+}
+
+.general_ahieve__wrap {
+  width: 1000px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.general_achieve_title {
+  margin-bottom: 60px;
+}
+
+.general_achieve_title::before {
+  top: 35%;
+  left: 50%;
+  transform: translateX(calc(-50% - 110px));
+}
+
+@media (max-width: 767px) {
+  .general_achieve_title::before {
+    transform: translateX(calc(-50% - 90px));
+    top: 25%;
+  }
+}
+
+.general_achieve_title::after {
+  top: 35%;
+  right: 50%;
+  transform: translateX(calc(-50% + 170px));
+}
+
+@media (max-width: 767px) {
+  .general_achieve_title::after {
+    transform: translateX(calc(-50% + 150px));
+    top: 25%;
+  }
+}
+
+.special_achievement_title {
+  margin-bottom: 60px;
+}
+
+.special_achievement_title::before {
+  top: 35%;
+  left: 50%;
+  transform: translateX(calc(-50% - 160px));
+}
+
+@media (max-width: 767px) {
+  .special_achievement_title::before {
+    transform: translateX(calc(-50% - 130px));
+    top: 25%;
+  }
+}
+
+.special_achievement_title::after {
+  top: 35%;
+  right: 50%;
+  transform: translateX(calc(-50% + 225px));
+}
+
+@media (max-width: 767px) {
+  .special_achievement_title::after {
+    transform: translateX(calc(-50% + 190px));
+    top: 25%;
+  }
+}
+
+.general_achieve__item {
+  background: #fff;
+  border-radius: 20px;
+  padding: 60px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .general_achieve__item {
+    padding: 15px;
+  }
+}
+
+.general_achieve__item:not(:first-child) {
+  margin-top: 40px;
+}
+
+.general_achive__tag {
+  position: absolute;
+  top: 0;
+  right: 60px;
+}
+
+@media (max-width: 767px) {
+  .general_achive__tag {
+    right: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .achive_svg {
+    width: 80px;
+    height: 60px;
+  }
+}
+
+.general_achive_titlewrap {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #c2c2c2;
+  padding-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  .general_achive_titlewrap {
+    display: block;
+  }
+}
+
+.general_achive__title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  letter-spacing: 2.24px;
+  margin-right: 40px;
+}
+
+@media (max-width: 767px) {
+  .general_achive__title {
+    font-size: 1.25rem;
+    letter-spacing: 1.6;
+  }
+}
+
+.general_achive_desc {
+  font-size: 0.875rem;
+  color: #1391e6;
+  letter-spacing: 1.12px;
+}
+
+@media (max-width: 767px) {
+  .general_achive_desc {
+    margin-top: 20px;
+  }
+}
+
+.general_achive__wrap {
+  display: flex;
+  margin-top: 30px;
+}
+
+@media (max-width: 767px) {
+  .general_achive__wrap {
+    display: block;
+  }
+}
+
+.general_ahive_text_wrap {
+  width: 50%;
+  margin-right: 40px;
+}
+
+@media (max-width: 767px) {
+  .general_ahive_text_wrap {
+    width: 100%;
+  }
+}
+
+.general_achive_text {
+  font-size: 0.875rem;
+  line-height: calc(24 / 14);
+}
+
+.general_achive_text2 {
+  margin-top: 20px;
+}
+
+.general_achive_image {
+  width: 50%;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .general_achive_image {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+.guidance_bottom_bg {
+  height: 15.703vw;
+  width: 100%;
+  background: url(../images/bg-bottom.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  position: relative;
+}
+
+.guidance_bottom_bg::before {
+  content: "";
+  position: absolute;
+  background: url(../images/deco-kirakira2-w.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 4.453vw;
+  height: 4.453vw;
+  bottom: 80px;
+  left: 10px;
+}
+
+@media (max-width: 767px) {
+  .guidance_bottom_bg::before {
+    bottom: 30px;
+  }
+}
+
+.guidance_bottom_bg::after {
+  content: "";
+  position: absolute;
+  background: url(../images/deco-kirakira-w.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 9.766vw;
+  height: 10.703vw;
+  bottom: 60px;
+  right: 5px;
+}
+
+@media (max-width: 767px) {
+  .guidance_bottom_bg::after {
+    bottom: 10px;
   }
 }
